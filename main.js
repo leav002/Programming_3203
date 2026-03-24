@@ -1,5 +1,49 @@
-//html -> 가져와 js로
+  let count = 0;
 
-//숫자 증가
+//   function increase() {
+//     count++;
+//     document.getElementById("count").innerText = count;
+//   }
 
-//숫자표시
+
+
+//------------------------------------------------------------------------------
+
+
+
+// const resultH1 = document.getElementsByTagName("h1")[0];
+// const plusButton = document.getElementsByTagName('button')[0];
+// //getElementsByTagName = 이 태그 이름의 엘리먼트를 가져온다. 시험나옴
+
+// const resultH1 = document.querySelector("#result");
+// const resultH1 = resultH1;
+
+// plusButton.addEventListener("click", 처리함수);
+
+// function 처리함수() {
+//     count++;
+
+//     resultH1.innerHTML = count;
+// }
+
+
+
+//--------------------------------------------------------------------
+
+
+
+const resultH1 = document.getElementsByTagName("h1")[0];
+// const plusButton = document.getElementsByTagName('button')[0];
+const plusButton = document.getElementsByClassName("plusButton")[0];
+
+// plusButton.addEventListener("click", ()=> {
+//     count++;
+
+//     resultH1.innerHTML = count;
+// });
+
+plusButton.onclick = () => {
+    count++;
+
+    resultH1.innerHTML = count;
+};
