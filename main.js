@@ -42,8 +42,16 @@ const plusButton = document.getElementsByClassName("plusButton")[0];
 //     resultH1.innerHTML = count;
 // });
 
-plusButton.onclick = () => {
-    count++;
+// plusButton.onclick = () => {
+//     count++;
 
+//     resultH1.innerHTML = count;
+// };
+
+
+function plus() {
+    count++;
+    
     resultH1.innerHTML = count;
-};
+    
+}
