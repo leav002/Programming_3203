@@ -55,3 +55,17 @@ function plus() {
     resultH1.innerHTML = count;
     
 }
+
+function plus2() {
+    count +=2 ;
+    
+    resultH1.innerHTML = count;
+    
+}
+
+function minus() {
+    count --;
+    
+    resultH1.innerHTML = count;
+    
+}
