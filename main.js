@@ -49,23 +49,8 @@ const plusButton = document.getElementsByClassName("plusButton")[0];
 // };
 
 
-function plus() {
-    count++;
-    
-    resultH1.innerHTML = count;
-    
-}
+  function plus(number = 1) {
+    count += number;
 
-function plus2() {
-    count +=2 ;
-    
     resultH1.innerHTML = count;
-    
-}
-
-function minus() {
-    count --;
-    
-    resultH1.innerHTML = count;
-    
-}
+  }
