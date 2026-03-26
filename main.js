@@ -1,56 +1,70 @@
-  let count = 0;
+//   let count = 0;
 
-//   function increase() {
-//     count++;
-//     document.getElementById("count").innerText = count;
-//   }
+// //   function increase() {
+// //     count++;
+// //     document.getElementById("count").innerText = count;
+// //   }
 
 
 
-//------------------------------------------------------------------------------
+// //------------------------------------------------------------------------------
+
+
+
+// // const resultH1 = document.getElementsByTagName("h1")[0];
+// // const plusButton = document.getElementsByTagName('button')[0];
+// // //getElementsByTagName = 이 태그 이름의 엘리먼트를 가져온다. 시험나옴
+
+// // const resultH1 = document.querySelector("#result");
+// // const resultH1 = resultH1;
+
+// // plusButton.addEventListener("click", 처리함수);
+
+// // function 처리함수() {
+// //     count++;
+
+// //     resultH1.innerHTML = count;
+// // }
+
+
+
+// //--------------------------------------------------------------------
 
 
 
 // const resultH1 = document.getElementsByTagName("h1")[0];
-// const plusButton = document.getElementsByTagName('button')[0];
-// //getElementsByTagName = 이 태그 이름의 엘리먼트를 가져온다. 시험나옴
+// // const plusButton = document.getElementsByTagName('button')[0];
+// const plusButton = document.getElementsByClassName("plusButton")[0];
 
-// const resultH1 = document.querySelector("#result");
-// const resultH1 = resultH1;
+// // plusButton.addEventListener("click", ()=> {
+// //     count++;
 
-// plusButton.addEventListener("click", 처리함수);
+// //     resultH1.innerHTML = count;
+// // });
 
-// function 처리함수() {
-//     count++;
+// // plusButton.onclick = () => {
+// //     count++;
 
-//     resultH1.innerHTML = count;
-// }
-
-
-
-//--------------------------------------------------------------------
+// //     resultH1.innerHTML = count;
+// // };
 
 
-
-const resultH1 = document.getElementsByTagName("h1")[0];
-// const plusButton = document.getElementsByTagName('button')[0];
-const plusButton = document.getElementsByClassName("plusButton")[0];
-
-// plusButton.addEventListener("click", ()=> {
-//     count++;
+//   function plus(number = 1) {
+//     count += number;
 
 //     resultH1.innerHTML = count;
-// });
+//   }
 
-// plusButton.onclick = () => {
-//     count++;
+let count = 0;
 
-//     resultH1.innerHTML = count;
-// };
+const resultH1 = document.getElementById("result");
+const buttons = document.getElementsByClassName("plusButton");
 
+buttons[0].addEventListener("click", () => plus(1));
+buttons[1].addEventListener("click", () => plus(2));
+buttons[2].addEventListener("click", () => plus(-1));
 
-  function plus(number = 1) {
+function plus(number = 1) {
     count += number;
-
     resultH1.innerHTML = count;
-  }
+}
