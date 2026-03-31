@@ -17,6 +17,17 @@ function CounterApp() {
     <button onClick={()=> setCount(0)}>reset</button>
 
 
+    <button onClick={() => setCount((count) => {
+      if(count + 1 >= 10) {
+        return 10;
+      }
+      else {
+        return count + 1;
+      }
+    })}>+max10</button>
+
+    <button onClick={()=> setCount((count) => count + 1 >= 10? 10:count+1)}>+max10(ver.2)</button>
+    <button onClick={()=> setCount((count) => Math.min(count + 1, 10))}>+max10(ver.3)</button>
 
       {/* <button
         className="counter"
