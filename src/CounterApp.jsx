@@ -8,26 +8,42 @@ function CounterApp() {
   // count : 이전 또는 현재 값, setCount() : count 값 변경 함수. 반드시 이걸 거쳐야 함
   const [count, setCount] = useState(0)
 
-  return (
-    <>
-    <h1>{count}</h1>
-    <button onClick={()=> setCount((count) => count + 1)}>+</button>
-    <button onClick={()=> setCount((count) => count + 2)}>+2</button>
-    <button onClick={()=> setCount((count) => count - 1)}>-</button>
-    <button onClick={()=> setCount(0)}>reset</button>
-
-
-    <button onClick={() => setCount((count) => {
-      if(count + 1 >= 10) {
+  function plusMax10() {
+    setCount((count) => {
+      if (count + 1 >= 10) {
         return 10;
       }
       else {
         return count + 1;
       }
-    })}>+max10</button>
+    })
+  }
 
-    <button onClick={()=> setCount((count) => count + 1 >= 10? 10:count+1)}>+max10(ver.2)</button>
-    <button onClick={()=> setCount((count) => Math.min(count + 1, 10))}>+max10(ver.3)</button>
+  return (
+    <>
+      <h1>{count}</h1>
+      <button onClick={() => setCount((count) => count + 1)}>+</button>
+      <button onClick={() => setCount((count) => count + 2)}>+2</button>
+      <button onClick={() => setCount((count) => count - 1)}>-</button>
+      <button onClick={() => setCount(0)}>reset</button>
+
+
+      <button onClick={() => setCount((count) => {
+        if (count + 1 >= 10) {
+          return 10;
+        }
+        else {
+          return count + 1;
+        }
+      })}>+max10</button>
+
+      <button onClick={() => setCount((count) => count + 1 >= 10 ? 10 : count + 1)}>+max10(ver.2)</button>
+      <button onClick={() => setCount((count) => Math.min(count + 1, 10))}>+max10(ver.3)</button>
+
+      <button onClick={() => plusMax10()}>+max10</button>
+  
+
+
 
       {/* <button
         className="counter"
