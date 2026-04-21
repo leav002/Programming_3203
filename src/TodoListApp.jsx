@@ -3,8 +3,8 @@ import Button from "./components/Button.jsx"
 import Checkbox from "./components/Checkbox.jsx"
 import TodoItemEmpty from "./components/TodoItemEmpty.jsx"
 import TodoHeader from './components/TodoHeader.jsx'
-import TodoAdder from './components.TodoAdder.jsx'
-import TodoItem from './components.TodoItem.jsx'
+import TodoAdder from './components/TodoAdder.jsx'
+import TodoList from './components/TodoList.jsx'
 import { useState } from 'react'
 
 
@@ -37,7 +37,7 @@ function TodoListApp() {
       <div className="todo">
         <TodoHeader/>
         <TodoAdder addTodo={addTodo} />
-        <TodoItem/>
+        <TodoList todos={todos} />
       </div>
     </>
   )
